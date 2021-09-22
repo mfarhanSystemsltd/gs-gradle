@@ -13,13 +13,13 @@ steps:
 - task: CmdLine@2
   inputs:
     script: 'ls'
-    
+
 - task: Gradle@2
   inputs:
     workingDirectory: 'complete/'
     gradleWrapperFile: 'complete/gradlew'
-    # codeCoverageToolOption: 'Cobertura'
-    # codeCoverageClassFilesDirectories: '/complete/src/main/java/hello/'
+    codeCoverageToolOption: 'Cobertura'
+    codeCoverageClassFilesDirectories: 'build/classes/main/'
     gradleOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
