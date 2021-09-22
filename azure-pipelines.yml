@@ -18,8 +18,8 @@ steps:
   inputs:
     workingDirectory: 'complete/'
     gradleWrapperFile: 'complete/gradlew'
-    codeCoverageToolOption: 'Cobertura'
-    codeCoverageClassFilesDirectories: 'build/classes/main/'
+    # codeCoverageToolOption: 'Cobertura'
+    # codeCoverageClassFilesDirectories: 'build/classes/main/'
     gradleOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
@@ -29,4 +29,6 @@ steps:
     tasks: 'build'
 - task: CmdLine@2
   inputs:
-    script: 'ls'
+    script: |
+       cd test && ls
+  displayName: 'test'
