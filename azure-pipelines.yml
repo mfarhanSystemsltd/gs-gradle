@@ -12,7 +12,7 @@ pool:
 steps:
 - task: Gradle@2
   inputs:
-    workingDirectory: '$(Systems.DefaultWorkingDirectory)/complete/'
+    workingDirectory: 'complete/'
     gradleWrapperFile: 'complete/gradlew'
     gradleOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
